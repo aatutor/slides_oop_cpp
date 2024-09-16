@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Конструкторы</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Конструкторы и инициализация</h2>
+					<small name="autor" style="margin-right:20%; margin-top: 5%; text-align: left;">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Инициализация объектов</h3>
+					<pre><code src="files/02_constructor/00-empty.cpp" src-data="21-23" no-after></code></pre>
+					<pre><code src="files/02_constructor/00-empty.cpp" src-data="25-32" data-line-numbers=""></code></pre>
+				</section>
+				<!-- TODO: поменять картинку -->
+				<section><h3>Время жизни объекта</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div><img src="imgs/02/0301.webp" alt=""></div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code data-line-numbers=""><script type="text/template">
+								void Foo() {
+									int a;
+
+									int* b = new int;	// рождение
+									*b = 5;						// жизнь
+									delete b;					// смерть
+
+									cout << &a <<", "<< b << endl; 
+																	 // b хранит адрес
+								}	// авто-delete &a
+							</script></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Время жизни сложного объекта</h3>
+					<pre><code src="files/02_constructor/00-empty.cpp" src-data="4-12" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/02_constructor/00-empty.cpp" src-data="16-18" data-line-numbers=""></code></pre>
+				</section>
+
+				<section><h3>Конструктор</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/02_constructor/11-ctors.cpp" src-data="4-9,11-12,17-18" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/02_constructor/11-ctors.cpp" src-data="22-23|1" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div><img src="imgs/02/0302.jpg" alt=""></div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Инициализация полей</h3>
+					<div class="r-stack">
+						<div>
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1 fragment fade-out" data-fragment-index="5">
+									<pre><code src="files/02_constructor/10-init.cpp" src-data="4-5,7-8,13,19-21,28-30" data-line-numbers="" no-after></code></pre>
+									<pre><code src="files/02_constructor/10-init.cpp" src-data="39" data-line-numbers="" no-after></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1 fragment fade-in" data-fragment-index="0">
+									<div class="h-mar h-mar-l1 fragment fade-out" data-fragment-index="10">
+										<pre><code src="files/02_constructor/10-init.cpp" src-data="4-5,7-8,13,23-24,28-30" data-line-numbers=""></code></pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1 fragment fade-in" data-fragment-index="5">
+									<pre><code src="files/02_constructor/10-init.cpp" src-data="4-5,10-11,13,19,28-30" data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1 fragment fade-in" data-fragment-index="10">
+									<pre><code src="files/02_constructor/10-init.cpp" src-data="4-5,10-11,13,15,28-30" data-line-numbers="" no-after></code></pre>
+									<pre><code src="files/02_constructor/10-init.cpp" src-data="43" data-line-numbers="" no-after></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fragment fade-out" data-fragment-index="10">
+					</div>
+				</section>
+				<section><h3>Конструкторы</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/02_constructor/11-ctors.cpp" src-data="4-11,16-17" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/02_constructor/11-ctors.cpp" src-data="22-23" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/02_constructor/11-ctors.cpp" src-data="4-8,13-17" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/02_constructor/11-ctors.cpp" src-data="26-27" data-line-numbers="2"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Перегрузка конструктора</h3>
+					<pre><code src="files/02_constructor/12-overload.cpp" src-data="4-8,10,14-15" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/02_constructor/12-overload.cpp" src-data="15-16|5"></code></pre>
+				</section>
+
+				<section><h3>Деструктор</h3>
+					<pre><code src="files/02_constructor/20-dtor.cpp" src-data="4-9,11-13,32-33,35-36" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files/02_constructor/20-dtor.cpp" src-data="32-34|9" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Практика</h3>
+					<pre><code src="files/02_constructor/practice1.cpp" src-data="8-17,,23|1" data-line-numbers=""></code></pre>
+				</section>
+				<!-- <section><h3>Практика</h3>
+					<pre><code src="files/02_constructor/practice2.cpp" src-data="8-17,,23" data-line-numbers=""></code></pre>
+				</section> -->
+				<section><h3>Делегирование конструктора</h3>
+					<pre><code src="files/02_constructor/12-overload.cpp" src-data="4-8,12,14-15" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/02_constructor/12-overload.cpp" src-data="24-25" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Еще немного делегирования</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/02_constructor/20-dtor.cpp" src-data="4,,9,16,20,22-23,27-28,30,,36" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/02_constructor/20-dtor.cpp" src-data="4,,9,18,20,25,27-28,30,,36" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+
+				
+				<section data-markdown="home-works-md\02_constructor.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

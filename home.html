@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Check homework</title>
+	
+	<link rel="stylesheet" href="reveal/dist/reset.css">
+	<link rel="stylesheet" href="reveal/dist/reveal.css">
+	<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+	<style>
+		::marker {
+			content: '>> ';
+		}
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>Check homework</h3>
+
+				<ul id="list"></ul>
+				<ul id="reserve"></ul>
+			</section>
+		</div>
+	</div>
+	<script>
+		var divs = [
+			document.getElementById('list'),
+			document.getElementById('reserve')
+		];
+
+		var count = 0;
+		const LIMIT = 14;
+		const lections = [
+			'home/00_Base',
+			'home/01_Intro',
+			'home/02_Constructor',
+			'home/03_static-const',
+			'home/04_copy-move',
+			'home/05_operator-1',
+			'home/06_operator-2',
+			'home/07_operator-3',
+			'home/08_template',
+			'home/09_stack',
+			'home/10_queue',
+			'home/11_one-list',
+			'home/12_duo-list',
+			'home/13_bin-tree',
+			'home/14_inheritance',
+			'home/15_virtual',
+			'home/16_abstract',
+			'home/17_multiple',
+			'home/18_fstream',
+			'home/19_string_ptr_cast',
+			'home/20_containers',
+			'home/21_functor',
+			'home/30_game-of-life',
+			''
+		].forEach(lection => {
+			if (lection != '') {
+				divs[Math.floor(count/LIMIT)].innerHTML 
+						+= `<li><a href="${lection}.html">${lection.slice(5)}</a></li>`;
+				++count;
+			}
+		})
+	</script>
+
+	<script src="reveal/dist/reveal.js"></script>
+	<script src="reveal/plugin/notes/notes.js"></script>
+	<script src="reveal/plugin/markdown/markdown.js"></script>
+	<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+	<script src="reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			width: 1200,
+			transition: 'fade',
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+		});
+	</script>
+</body>
+</html>

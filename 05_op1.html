@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>operators #1</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Перегрузка операторов</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Что такое перегрузка</h3>
+					<pre><code data-line-numbers=""><script type="text/template">
+						void Foo(int, int);
+						//int Foo(int, int); - error
+						
+						void Foo(char, char);
+						
+						void Foo(char*, int);
+						
+						void Foo(double);
+						
+						void Foo(int*, double[], const char*, ...);						
+					</script></code></pre>
+				</section>
+				<section><h3>Перегрузка оператора</h3>
+					<pre><code src="files\05_operators\simple.cpp" src-data="20-24|4" data-line-numbers="" no-after></code></pre>
+					<error>no match for 'operator+'</error>
+					<p>оператор здесь - как имя функции</p>
+				</section>
+				<section><h3>Сложение методом</h3>
+					<div class="r-hstack">
+						<div class="h-mar">
+							<pre><code src="files\05_operators\simple.cpp" src-data="3-17|1" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar">
+							<pre><code src="files\05_operators\simple.cpp" src-data="27-30|4" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Сложение оператором</h3>
+					<pre><code src="files/05_operators/operators.cpp" src-data="36-40|-1" data-line-numbers=""></code></pre>
+					<pre><code src="files/05_operators/operators.cpp" src-data="46-47,49|-1" data-line-numbers="" no-after></code></pre>
+				</section>
+				<section><h3>А если поля приватные?</h3>
+					<pre><code src="files/05_operators/operators.cpp" src-data="4,6-9,,31" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/05_operators/operators.cpp" src-data="35-39" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Оператор как метод</h3>
+					<pre><code src="files/05_operators/operators.cpp" src-data="4,6-8,,11-14,31" data-line-numbers=""></code></pre>
+					<pre><code src="files/05_operators/operators.cpp" src-data="0-1,3|45" data-line-numbers="" no-after></code></pre>
+				</section>
+				<section><h3>Оптимизация</h3>
+					<pre><code src="files/05_operators/operators.cpp" src-data="4,6-8,,16-18,31" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/05_operators/operators.cpp" src-data="45-46,48,50-51" data-line-numbers=""></code></pre>
+				</section>
+				<!-- TODO: умножение -->
+				<section><h3>Унарный оператор</h3>
+					<pre><code src="files/05_operators/operators.cpp" src-data="4,6-8,,24-27,31" data-line-numbers=""></code></pre>
+					<pre><code src="files/05_operators/operators.cpp" src-data="62" data-line-numbers="" no-after></code></pre>
+				</section>
+				<section><h3>Глобально и/или как метод…</h3>
+					<pre><code src="files/05_operators/complex.cpp" src-data="20-26|1" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/05_operators/complex.cpp" src-data="32-35|3" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Что вызовется?</h3>
+					<pre><code src="files/05_operators/complex.cpp" src-data="3,,9-14,18|1" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/05_operators/complex.cpp" src-data="37|3" data-line-numbers=""></code></pre>
+				</section>
+				
+				<section><h3>Самостоятельно</h3>
+					<pre><code data-line-numbers=""><script type="text/template">
+						class Point{
+							...
+						public:
+							bool operator== (Point);
+							bool operator!= (Point);
+							bool operator> (Point);
+							bool operator< (Point);
+						
+							Point operator* (double);
+						};
+					</script></code></pre>
+				</section>
+				<section><h3>Практика</h3>
+					<pre><code src="files/05_operators/practice1.cpp" src-data="" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Практика 2</h3>
+					<pre><code src="files/05_operators/practice2.cpp" src-data="" data-line-numbers=""></code></pre>
+				</section>
+
+				<section data-markdown="home-works-md\05_operator-1.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>operators #2</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Пeрегрузка операторов #2</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Инкремент</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/inc.cpp" src-data="4-7,,10-14,31" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/inc.cpp" src-data="38-40" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Область видимости</h3>
+					<div class="r-hstack">
+						<div class="h-mar">
+							<p>main::</p>
+						</div>
+						<div class="h-mar">
+							<p>Foo::</p>
+						</div>
+					</div>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/access.cpp" src-data="9-15" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1 h-mar-r1">
+							<p><div class="arrow right"></div></p>
+							<p><div class="arrow left"></div></p>
+							<c>&x</c>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/access.cpp" src-data="3-7" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Инкремент</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/inc.cpp" src-data="4-7,,16-20,31" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/inc.cpp" src-data="38-40" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Префиксная/постфиксная формы</h3>
+					<pre><code src="files/06_operators/simple.cpp" src-data="7-10" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Постфиксная форма</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/inc.cpp" src-data="4,,22-26,31" after data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/inc.cpp" src-data="43,46-47" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/06_operators/inc.cpp" src-data="43-45" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Перегрузка &lt;&lt;</h3>
+					<pre><code src="files/06_operators/stream.cpp" src-data="5,,10-13,18" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/06_operators/stream.cpp" src-data="24-27|-2" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Перегрузка &gt;&gt;</h3>
+					<pre><code src="files/06_operators/stream.cpp" src-data="5,,14-18" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/06_operators/stream.cpp" src-data="24,27-30|-2" data-line-numbers=""></code></pre>
+				</section>
+				
+				<section><h3>cout &lt;&lt; "русский"</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/06_operators/russain.cpp" src-data="9-15" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/06_operators/russain.cpp" src-data="44" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/06_operators/russain.cpp" src-data="18-23" data-line-numbers="" no-after></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/06_operators/russain.cpp" src-data="25-30" data-line-numbers="" no-after></code></pre>
+								</div>
+							</div>
+							<pre><code src="files/06_operators/russain.cpp" src-data="47" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible">
+							<pre><code src="files/06_operators/russain.cpp" src-data="33-40" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/06_operators/russain.cpp" src-data="50" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Оператор копирования</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/assignment.cpp" src-data="5-8,,24,26-29,31-34,52" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/assignment.cpp" src-data="57-60" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Оператор перемещения</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/assignment.cpp" src-data="2,5-8,,36,38-41,43-46,52" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/assignment.cpp" src-data="63-66" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Запрет</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/06_operators/assignment.cpp" src-data="5-8,,17,9-10,18-20,52" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/06_operators/assignment.cpp" src-data="70-77" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<!-- TODО: правило 3 / 5 -->
+				
+				<section><h3>Самостоятельно</h3>
+					<pre><code src="files/06_operators/practice-self.cpp" src-data="3-15" data-line-numbers=""></code></pre>
+					</script></code></pre>
+				</section>
+				<section><h3>Практика</h3>
+					<pre><code src="files/06_operators/practice1.cpp" src-data="24-36" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Практика 2</h3>
+					<pre><code src="files/06_operators/practice2.cpp" src-data="4-18" data-line-numbers=""></code></pre>
+				</section>
+				<section data-markdown="home-works-md\06_operator-2.md"></section>
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

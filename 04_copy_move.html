@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Copy & Move</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Копирование и перемещение</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Что можно сделать с Empty?</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/04_copy.move_ctor/Empty.cpp" src-data="1,19,8" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<img src="imgs/04/0501_cr.jpg" alt="" height="300rem">
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/04_copy.move_ctor/Empty.cpp" src-data="7-11|2" data-line-numbers="" no-after></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Магия!</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/04_copy.move_ctor/Empty.cpp" src-data="1-8" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/04_copy.move_ctor/Empty.cpp" src-data="13-17|1" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/04/0502.jpg" alt="">
+						</div>
+					</div>
+				</section>
+				<section><h3>Копирование объектов</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/04_copy.move_ctor/simple_copy.cpp" src-data="5-8|2" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/04_copy.move_ctor/simple_copy.cpp" src-data="9-12|2" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/04/0503_cr.jpg" alt="" height="300rem">
+						</div>
+					</div>
+				</section>
+				<section><h3>Копирование по умолчанию</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code data-fragment-index="0-2" src="files/04_copy.move_ctor/copy_move.cpp" src-data="3-8,10,27-32|2" 
+								data-line-numbers="2,7|1-7,9-13|1-8,13"></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="1">
+									<pre><code data-fragment-index="0-1" src="files/04_copy.move_ctor/copy_move.cpp" 
+										src-data="45-50" data-line-numbers="2|" no-after></code></pre>
+								</div>
+								<div class="fragment fade-in" data-fragment-index="1">
+									<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="53-60" data-line-numbers="" no-after></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Конструктор копирования</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="3-8,12,14-15,,32|2" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="45-50" data-line-numbers="" no-after></code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section><h3>Не-явное копирование</h3>
+					<pre><code src="files/04_copy.move_ctor/simple_copy.cpp" src-data="3" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files/04_copy.move_ctor/simple_copy.cpp" src-data="19-22" data-line-numbers="" no-after></code></pre>
+				</section>
+				<section><h3>Семантика ссылок</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<img src="imgs/04/0601.jpg" alt="">
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="imgs/04/0602.jpg" alt="" >
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<img src="imgs/04/0504.png" alt="">
+						</div>
+						<div class="fragment current-visible">
+							<img src="imgs/04/0505.png" alt="">
+						</div>
+						<div class="fragment current-visible">
+							<img src="imgs/04/0506.png" alt="">
+						</div>
+					</div>
+				</section>
+				<section><h3>Кросс-связывание</h3>
+					<img src="imgs/04/0507.png" alt="">
+				</section>
+				
+				<section><h3>Конструктор перемещения</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="3-5,,20,22-25,32|2" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<img src="imgs/04/0508_cr.jpg" alt="">
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="63-69" data-line-numbers=""></code></pre>
+								</div>
+								<div class="fragment current-visible">
+									<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="34-37|2" data-line-numbers="" no-after></code></pre>
+									<pre><code src="files/04_copy.move_ctor/copy_move.cpp" src-data="72" data-line-numbers="" no-after></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section><h3>Практика</h3>
+					<pre><code src="files/04_copy.move_ctor/practice1.cpp" src-data="4-17" data-line-numbers=""></code></pre>
+				</section>
+				
+				<section data-markdown="home-works-md/04_copy-move.md"></section>
+				
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

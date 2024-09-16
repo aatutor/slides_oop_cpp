@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>operator #3</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Перегрузка операторов #3</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Опишем класс</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4-17,,55" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="59-62" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Упростим доступ</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4,,19-21,55" after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="59-61,63-65" 
+								data-line-numbers="5"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Упростим еще?</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4,,19-21,55" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="59,,68" after 
+								data-line-numbers="3"></code></pre>
+						</div>
+					</div>
+					<error>lvalue required as left operand of assignment</error>
+				</section>
+				<section><h3>Упростим!</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4,,23-28,55" data-line-numbers="3"></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="59,,71" after 
+								data-line-numbers="3"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Перегрузим</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4,,30-35,55" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="59,,72" after 
+								data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Используем ()</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4,,42-44,55" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="59,,74,,76" no-after 
+								data-line-numbers="3"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Еще раз используем ()</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data="4,,45-49,55" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/brackets.cpp" src-data=",78-79" after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+					
+				<section><h3>Привидение типов</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/explicit.cpp" src-data="6-11" after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/explicit.cpp" src-data="15-20" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Приведем «куда-нибудь» точку)</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="5-7,,28" after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="34-35,37" data-line-numbers="3"></code></pre>
+						</div>
+					</div>
+					<error>cannot convert 'Point' to 'bool'</error>
+				</section>
+				<section><h3>(bool)</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="5-7,,10-12,28" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="37-40" after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>(double)</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="5-7,,13-15,28" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="42-45" after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>explicit cast</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="5-7,,17-22,28" data-line-numbers="8"></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/cast.cpp" src-data="42-45" after data-line-numbers="1"></code></pre>
+						</div>
+					</div>
+					<error>cannot convert 'Point' to 'double'</error>
+				</section>
+				<section><h3>explicit ctor</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/07_ops_static_cast/explicit.cpp" src-data="24-35"  data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/07_ops_static_cast/explicit.cpp" src-data="37-51" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section><h3>Нельзя перегрузить</h3>
+					<div data-markdown><textarea data-template>
+						|||
+						|---|---|
+						|`::`| оператор разрешения области |
+						|`.*`| оператор-указатель на член структуры/класса |
+						|`. `| оператор доступа к члену структуры/класса |
+						|`?:`| тернарный оператор |
+						||
+					</textarea></div>
+				</section>
+				<section><h3>Нельзя перегрузить глобально<br>(только как метод)</h3>
+					<div data-markdown><textarea data-template>
+						|||
+						|---|---|
+						|`=` | присваивание |
+						|`()`| вызов функции |
+						|`[]`| доступ по индексу |
+						|`->`| доступ к члену класса через указатель |
+						||
+					</textarea></div>
+				</section>
+
+				<section><h3>Самостоятельно</h3>
+					<pre><code src="files/07_ops_static_cast/practice1.cpp" src-data="4-17" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Практика</h3>
+					<pre><code src="files/07_ops_static_cast/practice2.cpp" src-data="19-32" data-line-numbers=""></code></pre>
+				</section>
+				<section data-markdown="home-works-md\07_operator-3.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

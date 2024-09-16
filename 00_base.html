@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Базовые инструменты</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><!-- preview -->
+					<section><h3>Преподаватель</h3>
+						<div class="r-hstack" style="height: 14em;">
+							<img src="imgs/00/0001.jpg" alt="text">
+							<div data-markdown>
+								<textarea data-template>
+									Тимофеев Александр Алексеевич <br>
+									[discord](https://discord.gg/HuFhVRrMHw) | 
+									[tg](https://t.me/aa_prepod) | 
+									[github](https://github.com/aatutor/oop_cpp_files) | 
+									[e-mail](aa.prepod@gmail.com)
+
+									- Репетитор, программист, баянист…
+										- C/C++, JS, C#, Java, Python, SQL…
+										- PHP, Pascal, Basic(QBasic, VBA), 1С…
+
+									- Матфак КемГУ
+										- Олимпиадник
+								</textarea>
+							</div>
+						</div>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+								### Знакомство
+								| | |
+								|---|---|
+								| Задачка: | Напишите функцию, которая возвращает сумму последовательных чисел от 1 до n. |
+						</textarea>
+					</section>
+					<section><h3>О курсе</h3>
+						<div class="r-hstack" style="height: 14em;">
+							<div data-markdown><textarea data-template>
+								- Не столько про С++...
+								- 3 блока:
+									- Основы ООП
+									- Структуры данных
+									- Инструменты в библиотеке (STL)
+								- *+* фичи программиста
+								- Д/З и экзамен
+									- сроки
+									- формат
+								- Дополнительные занятия
+							</textarea></div>
+							<img src="imgs/00/0002.jpg" alt="text">
+						</div>
+					</section>
+					<section data-markdown><textarea data-template>
+						### Формат ДЗ
+
+						1. Виды решений (один из):
+							- Исходник (`.h`,`.cpp`,`.cc`)
+							- Исходник<u>и</u> в архиве `.zip` **без сжатия (<u>НЕ весь проект!!!</u>)**
+							- Ссылка на репозиторий (файл в нем)
+						2. Код <u>компилируется</u> без ошибок (`MinGW`|`MSVS`! не clang)
+						3. Код отформатирован
+							1. <u>Отступы</u> (обязательно!)
+							1. *Именование полей, методов и т.п...*
+							1. *Отсутствие дублирования кода*	
+						4. Код проходит <u>тесты</u>*
+							1. *Решает поставленную задачу*
+					</textarea></section>
+					<section><h3>Решение ДЗ</h3>
+						<img src="imgs/00/0003-1.jpg" alt="text">
+					</section>
+					<section><h3>Уровни студентов</h3>
+						<img src="imgs/00/0101_cr.jpg" data-background-size="95%" alt="Уровни студентов">
+					</section>
+					<section><h3>Закрывайте пробелы</h3>
+						<div class="r-hstack" style="height: 14em;">
+							<img src="imgs/00/0102.jpg" alt="text">
+							<div data-markdown>
+								<textarea data-template>
+									- Написание кода (самостоятельно)
+									- Основы языка
+									- Базовые конструкции (`if, for, while`)
+									- Функции (объявление, использование)
+									- Типы данных (чем отличаются)
+									- Виды переменных (указатели?)
+									- Исключение КОПИПАСТЫ!!!	(к минимуму)							
+								</textarea>
+							</div>
+						</div>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Ресурсы для изучения
+
+							- Любой самоучитель или книга по С++ и ООП
+								- Учебник академии
+							- Пара неплохих ресурсов:
+								- [Учебник на метаните](https://metanit.com/cpp/tutorial/5.1.php)
+								- [Документация по библиотекам С++](https://en.cppreference.com/w/)
+							- Стиль именования и форматирования:
+								- [Рекомендации гугла](https://habr.com/ru/post/477722/)
+								- [Сборная статья](https://habr.com/ru/post/172091/)
+							- Для углубленного изучения C/С++:
+								- [Курс видео-лекций в МФТИ по С++](https://youtube.com/playlist?list=PL3BR09unfgciJ1_K_E914nohpiOiHnpsK)
+								- [Документация всему голова](https://en.cppreference.com/w/cpp/regex)
+								- [Набор задачек для закрепления знаний по С](http://www.gowrikumar.com/c/index.html)
+						</textarea>
+					</section>
+					<section>
+						<img src="imgs/00/git-oop.png" alt="text">
+						<h3>
+							<a href="https://github.com/aatutor/oop_cpp_files">github.com/aatutor/oop_cpp_files</a>
+						</h1>
+					</section>
+					<!-- TODO: формат работы для полустационара - теория дома, практика на занятиях -->
+				</section>
+				
+				<section>
+					<h2>Базовые инструменты<br>программиста</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>О базе</h3>
+					<div class="r-hstack">
+						<div class="h-mar" data-markdown><textarea data-template>
+							- <a href="#/exception">exceptions</a>
+							- <a href="#/namespace">namespace</a>
+							- <a href="#/oop-style">OOP-style</a>
+							- <a href="#/test">Тестирование</a>
+							- <a href="#/git">Git</a>
+						</textarea></div>
+						<div class="h-mar"><img src="imgs\00\0201.jpg" alt="" height="400rem"></div>
+					</div>
+				</section>
+
+				<section id="exception"><h3>exception</h3></section>
+				<section><h3>Работа с ошибками</h3>
+					<div class="r-hstack">
+						<pre class="h-mar-r1"><code src="files\00_base\00-ex_if.cpp" src-data="5-17" data-line-numbers=""></code></pre>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs\00\0222.jpg" alt="" height="200rem" style="margin-bottom: 0rem;">
+							<div class="console" style="margin-top: 0rem;">
+								<div data-markdown><textarea data-template>
+									- input: 1 2
+									- 0.5
+									- input: 2 0
+									- <b style="color: black; background-color: red; margin-right: 6rem;">Inf</b> 
+									<b style="color: yellow;"><-- b = 0</b>
+									- input: 3 4
+									- 0.75
+									- input: 0
+								</textarea></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Обработка ошибки в функции</h3>
+					<pre><code src="files\00_base\01-secret.cpp" src-data="4-9" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files\00_base\01-secret.cpp" src-data="14,,21-26" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Выброс исключения</h3>
+					<pre><code src="files\00_base\02-exception.cpp" src-data="4-9" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Обработка исключения</h3>
+					<pre><code data-line-numbers=""><script type="text/template">
+						try {
+							// code with error
+						}
+						catch (/*error_type*/ /*object_name*/) {
+							// code for error
+						}
+					</script></code></pre>
+				</section>
+				<section><h3>Обработка исключений</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar-r1">
+									<pre><code src="files\00_base\03-simple.cpp" src-data="5-11" data-line-numbers=""></code></pre>
+									<div class="console">
+										Error with code: 404
+									</div>
+								</div>
+								<div class="h-mar-l1">
+									<pre><code src="files\00_base\03-simple.cpp" src-data="14-20" data-line-numbers=""></code></pre>
+									<div class="console">
+										Simple error :3
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar-r1">
+									<pre><code src="files\00_base\04-err_any.cpp" src-data="4-20" data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar-l1">
+									<div style="margin-top: 1rem; margin-bottom: 1rem;">
+										<pre class="h-mar-l1"><code src="files\00_base\04-err_any.cpp" src-data="24" no-after data-line-numbers=""></code></pre>
+										<div class="console h-mar-r1"> Error with code:) 55 </div>
+									</div>
+									<div style="margin-top: 1rem; margin-bottom: 1rem;">
+										<pre class="h-mar-l1"><code src="files\00_base\04-err_any.cpp" src-data="25" no-after data-line-numbers=""></code></pre>
+										<div class="console h-mar-r1"> Error one!!!11 </div>
+									</div>
+									<div style="margin-top: 1rem; margin-bottom: 1rem;">
+										<pre class="h-mar-l1"><code src="files\00_base\04-err_any.cpp" src-data="26" no-after data-line-numbers=""></code></pre>
+										<div class="console h-mar-r1"> Other error =( </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Пример</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\02-exception.cpp" src-data="4-9" no-after data-line-numbers=""></code></pre>
+							<div class="console">
+								<div data-markdown><textarea data-template>
+									- input: 1 2
+									- 0.5
+									- input: 2 0
+									- <b style="color: black; background-color: red; margin-right: 6rem;">Inf</b> 
+									<b style="color: yellow;"><-- b = 0</b>
+									- input: 3 4
+									- 0.75
+									- input: 0
+								</textarea></div>
+							</div>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files\00_base\02-exception.cpp" src-data="12-26" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Самостоятельно</h3>
+					<div data-markdown><textarea data-template>
+						1. Напишите функцию `GetSum`, которая вычисляет сумму первых `n` элементов арифметической прогрессии. 
+							- `n` - количество элементов
+							- `a` - первый элемент
+							- `b` - последний элемент	
+						2. Функция должна выбрасывать исключение: 
+							- `1` - если `n` меньше 0
+							- `2` - если `a` не меньше `b`	
+						3. Обработайте исключения при вызове метода, и выведите сообщение о соответствующей ошибке, если возникнет.						
+						
+						Формула для вычисления: `(a+b)*n/2`
+					</textarea></div>
+				</section>
+<!-- TODO: тест самостоялок в файлы -->
+				<section id="namespace"><h3>namespace</h3></section>
+				<section><h3>Пространство имен</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\10-myspace.cpp" src-data="4-13" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files\00_base\10-myspace.cpp" src-data="27-32" no-after data-line-numbers=""></code></pre>
+							<div><img src="imgs\00\0223.jpg" alt="" width="460rem" style="margin-top: 0rem;"></div>
+						</div>
+					</div>
+				</section>
+				<!-- TODO: безымянное перенести на попозже -->
+				<section><h3>Безымянное пространство</h3>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="15-17" data-line-numbers="" no-after></code></pre>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="34-39" data-line-numbers=""></code></pre>
+					<error>'y' was not declared in this scope</error>
+				</section>
+				<section><h3>local scope</h3>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="73-76,,77-83|+1" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="81-83|+5" data-line-numbers="" data-ln-start-from="15"></code></pre>
+				</section>
+				<section><h3>Повторное объявление</h3>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="4-5,,12-13,,19-22" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="41" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Директива «using»</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\10-myspace.cpp" src-data="43-50" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files\00_base\10-myspace.cpp" src-data="52-59" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+					<error>'x' was not declared in this scope</error>
+				</section>
+				<section><h3>Пример с «using»</h3>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="61-65" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files\00_base\10-myspace.cpp" src-data="67-72" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Избежание конфликта имен</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\11-pi.cpp" src-data="3-14" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files\00_base\11-pi.cpp" src-data="17-22" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Самостоятельно</h3>
+					<div data-markdown><textarea data-template>
+						- Опишите две структуры `Point`:
+							- с целыми координатами
+							- с вещественными координатами	
+						- Определите их в пространствах имен `Integer` и `Double` соответственно. Создайте в `main` переменные этих структур, проверьте работоспособность.
+					</textarea></div>
+				</section>
+<!-- TODO: оставить только практику? -->
+				<section id="oop-style"><h3>Немного про ООП</h3></section>
+				<section><h3>Основа ООП</h3>
+					<p>Принцип: «все в программе – объекты»</p>
+					<img src="imgs/01/0102.jpg" alt="пикча с объектами" height="400em">
+				</section>
+				<section><h3>Пример ООП</h3>
+					<div class="r-hstack">
+						<div style="margin-right: 3rem;">
+							<p>Функциональный стиль</p>
+							<pre><code data-line-numbers="" src="files/01_intro/00-demo.cpp" src-data="2-9" after></code></pre>
+						</div>
+						<div>
+							<p>Объектно-ориентированный</p>
+							<pre><code data-line-numbers="" src="files/01_intro/00-demo.cpp" src-data="12-19"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Практика</h3>
+					<div class="r-hstack">
+						<pre><code src="files/00_base/practice1.cpp" src-data="2,,5-16" data-line-numbers=""></code></pre>
+						<div style="margin: auto">
+							<div class="console">
+								Hello world!<br>
+								12
+							</div>
+							<div class="arrow down"></div>
+							<div class="console">
+								H-e-l-l-o- -w-o-r-l-d-!-
+							</div>
+							<div class="arrow down"></div>
+							<div class="console">
+								H-e-l-l-o<br>
+								w*o*r*l*d*!								
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-markdown="home-works-md/00_Base.md"></section>
+
+				<section><h3>Тестирование</h3></section>
+				<section><h3>Классическая организация</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\20-classic.cpp" src-data="4-10" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files\00_base\20-classic.cpp" src-data="13-17," no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files\00_base\20-classic.cpp" src-data=",19-32" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Разделение функционала</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\21-diff.cpp" src-data="4-19" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files\00_base\21-diff.cpp" src-data="21-27" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files\00_base\21-diff.cpp" src-data="29-35" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Выключение кода</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\23-comm.cpp" src-data="5,,6-17" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1 fragment fade-in">
+							<pre><code src="files\00_base\23-comm.cpp" src-data=",21-33" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Множественное использование</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files\00_base\22-mult.cpp" src-data="4-16,33" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1 fragment fade-in">
+							<pre><code src="files\00_base\22-mult.cpp" src-data="18-32" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section id="git"><h3>Git</h3></section>
+				<section><h3>Система контроля версий</h3>
+					<div class="r-hstack">
+						<div class="h-mar fragment fade-in"><img src="imgs\00\0202-1.jpg" alt="" height="400rem"></div>
+						<div class="h-mar fragment fade-in">
+							<!-- <p><u>Как развивать свое приложение?</u></p> -->
+							<img src="imgs\00\0202.png" alt="" height="400rem">
+						</div>
+					</div>
+				</section>
+				<section><h3>Git</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar-l1 h-mar-r1"><img src="imgs\00\0203.png" alt=""></div>
+								<div class="h-mar h-mar-l1" data-markdown><textarea data-template>
+									- [Скачать](https://git-scm.com/download/win)
+									- [Учебник](https://git-scm.com/book/ru/v2)
+									- [Шпаргалка](https://training.github.com/downloads/ru/github-git-cheat-sheet/)						
+								</textarea></div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div data-markdown><textarea data-template>
+								||||
+								| --- | --- | --- |
+								| `git -v` | | Проверка |
+								| `git init` | | Создать каталог |
+								| `type nul > file.txt` | | Создать файл |
+								| `git status` | | Проверить состояние |
+								| `git add file.txt` | | Проиндексировать изменения |
+								||||
+							</textarea></div>
+						</div>
+						<div class="fragment current-visible">
+							<div data-markdown><textarea data-template>
+								||||
+								| --- | --- | --- |
+								| `git commit -m "hello"` | | Зафиксировать версию |
+								| `git config --local user.name "Ivan"` | | Задать имя |
+								| `git config --local user.email "i@m.c"` | | Задать мыло |
+								| `git log` | | Посмотреть версии |
+								| `git reset --hard 3995689a0f28168e7...` | | Откатиться к версии |
+								||||
+							</textarea></div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Удаленный репозиторий</h3>
+					<div><img src="imgs\00\0204.png" alt=""></div>
+				</section>
+				<section><h3>GitHub</h3>
+					<div data-markdown><textarea data-template>
+						||||
+						| --- | --- | --- |
+						||| [Регистрация](https://github.com/) |
+						| `ssh-keygen -t ed25519 -C"i@m.c"` | | Создание SSH ключа |
+						| `> sshkey.pub` | | Добавление в кабинет |
+						| `git remote add origin <repo_url>` | | Добавление репозитория |
+						| `git push origin master` | | Сохранение на сервер |
+						| `git clone <repo_url>` | | Клонирование |
+						||||
+					</textarea></div>
+				</section>
+				<section><h3>GitHub desktop</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div><img src="imgs\00\0204-1.png" alt=""></div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div><img src="imgs\00\0204-2.png" alt=""></div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Установка в MSVS</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div><img src="imgs\00\0206.png" alt=""></div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div><img src="imgs\00\0207.png" alt=""></div>
+								<div><img src="imgs\00\0208.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Управление проектом в VS 2022</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div><img src="imgs\00\0209.png" alt=""></div>
+								<div><img src="imgs\00\0210.png" alt=""></div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div><img src="imgs\00\0211.png" alt=""></div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div><img src="imgs\00\0214.png" alt=""></div>
+								<div><img src="imgs\00\0215.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Синхронизация на GitHub</h3>
+					<div><img src="imgs\00\0212.png" alt=""></div>
+				</section>
+				<section><h3>Самостоятельно</h3>
+					<div data-markdown><textarea data-template>
+						1. Создайте проект и замените строку "Hello World!\n" на приветствие от своего имени. 
+						1. Авторизуйтесь на github под пользователем:
+							- login: `topshcoder`
+							- pass: `CODERacademy42`
+						1. Отправьте проект на удаленный репозиторий, назвав его своим именем.						
+					</textarea></div>
+					<div><img src="imgs\00\0221.png" alt=""></div>
+				</section>
+
+				<!-- ₽ -->
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

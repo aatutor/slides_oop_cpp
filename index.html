@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OOP with C++</title>
+	
+	<link rel="stylesheet" href="reveal/dist/reset.css">
+	<link rel="stylesheet" href="reveal/dist/reveal.css">
+	<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+	<style>
+		::marker {
+			content: '>> ';
+		}
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>OOP with C++</h3>
+
+				<ul id="list"></ul>
+				<ul id="reserve"></ul>
+				<a href="https://github.com/aatutor/oop_cpp_files">Файлы из презентаций</a>
+			</section>
+		</div>
+	</div>
+	<script>
+		var divs = [
+			document.getElementById('list'),
+			document.getElementById('reserve')
+		];
+		const LIMIT = 14;
+		var count = 0;
+		const lections = [
+			'./00_base',
+			'./01_Intro',
+			'./02_Ctor',
+			'./03_static',
+			'./04_copy_move',
+			'./05_op1',
+			'./06_op2',
+			'./07_op3',
+			'./08_template',
+			'./09_stack',
+			'./10_queue',
+			'./11_one-list',
+			// './12_duo-list',
+			// `./13_bin-tree`,
+			''
+		].forEach(lection => {
+			if (lection != '') {
+				divs[Math.floor(count/LIMIT)].innerHTML 
+						+= `<li><a href="${lection}.html">${lection.slice(2)}</a></li>`;
+				++count;
+			}
+		})
+	</script>
+	<!-- <script src="reveal/fill-codes.js"></script> -->
+
+	<script src="reveal/dist/reveal.js"></script>
+	<script src="reveal/plugin/notes/notes.js"></script>
+	<script src="reveal/plugin/markdown/markdown.js"></script>
+	<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+	<script src="reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			width: 1200,
+			transition: 'fade',
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+		});
+	</script>
+</body>
+</html>

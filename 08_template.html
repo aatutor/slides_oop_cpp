@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Template</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Шаблоны</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+				<!-- TODO: add std::is_same<T, U>::value -->
+
+				<section><h3>Шаблонные функции</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/08_template/function.cpp" src-data="45-48" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/function.cpp" src-data="14-16" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/08_template/function.cpp" src-data="45-48,6-9" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/function.cpp" src-data="19-20" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible">
+							<pre><code src="files/08_template/function.cpp" src-data="6-9" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/function.cpp" src-data="23-26" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible">
+							<pre><code src="files/08_template/function.cpp" src-data="4" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/function.cpp" src-data="29-31" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Раннее связывание</h3>
+					<pre><code src="files/08_template/function.cpp" src-data="4" no-after data-line-numbers=""></code></pre>
+					<div class="arrow down"></div>
+					<pre><code src="files/08_template/function.cpp" src-data="29-31" no-after data-line-numbers=""></code></pre>
+					<div class="arrow down"></div>
+					<pre><code src="files/08_template/function.cpp" src-data="50-52" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Нужно исключение?</h3>
+					<pre><code src="files/08_template/function.cpp" src-data="45-48" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files/08_template/function.cpp" src-data="34-36"  data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Вносим исключение</h3>
+					<pre><code src="files/08_template/function.cpp" src-data="45-48,55-59" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files/08_template/function.cpp" src-data="39"  data-line-numbers=""></code></pre>
+				</section>
+				
+				<section><h3>Практика</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/08_template/array_func.cpp" src-data="5-12" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/array_func.cpp" src-data="24-25,27-29" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/08_template/array_func.cpp" src-data="13-19" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/array_func.cpp" src-data="24-30" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Шаблонные классы</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/08_template/array_class.cpp" src-data="10-24" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="10-24" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="46-50,52-57" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="4-5,7" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="60-61,63-65" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="27-41" no-after 
+										data-line-numbers="6,13"></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="60-61,63-65" no-after data-line-numbers=""></code></pre>
+									<div>
+										<error>no match for 'operator>'</error>
+									</div>
+									<div>
+										<error>no match for 'operator<<'</error>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="4-8,26,28,,32,,34,36,,39,,41" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/08_template/array_class.cpp" src-data="60-61,66-68" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Шаблоны с «переменными»</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<pre><code src="files/08_template/array_const_class.cpp" src-data="4-14" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/08_template/array_const_class.cpp" src-data="16-30" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/08_template/array_const_class.cpp" src-data="35-43" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				
+				<section><h3>Неопределенное число аргументов</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/08_template/many_args.cpp" src-data="5-12" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/many_args.cpp" src-data="26-27" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/08_template/many_args.cpp" src-data="15-19,21-22" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/08_template/many_args.cpp" src-data="29-30" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Список «инициализатор»</h3>
+					<pre><code src="files/08_template/init_list.cpp" src-data="41,43-44,46-48" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Работа со списком #1</h3>
+					<pre><code src="files/08_template/init_list.cpp" src-data="14-15,24-28,36-37" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Работа со списком #2</h3>
+					<pre><code src="files/08_template/init_list.cpp" src-data="14-15,17-21,36-37" data-line-numbers=""></code></pre>
+				</section>
+				<section><h3>Работа со списком #3</h3>
+					<pre><code src="files/08_template/init_list.cpp" src-data="14-15,31-34,36-37" data-line-numbers=""></code></pre>
+				</section>
+				
+				<section><h3>Полиморфизм</h3>
+					<div data-markdown><textarea data-template>
+						- дословно – это множественное использование
+						- один из трех основных принципов ООП
+						- шаблонные классы – это только половина полиморфизма
+						- позднее связывание позволяет создавать модули
+					</textarea></div>
+				</section>
+				
+				<section><h3>Самостоятельно</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/08_template/practice1.cpp" src-data="20-31|2" data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="imgs/8/0901.jpg" alt="" height="300rem">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/08_template/practice1.cpp" src-data="4-19|1" data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="imgs/8/0902.jpg" alt="" height="300rem">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-markdown="home-works-md\08_template.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

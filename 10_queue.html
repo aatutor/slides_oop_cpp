@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>queue</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Структуры данных<br>Очередь</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Очередь. FIFO</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="imgs/10/1101.jpg" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/10/q00.jpg" alt="">
+						</div>
+					</div>
+				</section>
+				<section><h3>Очередь. FIFO</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/10_queue/queue.cpp" src-data="4-8,,20" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/10/q01.jpg" alt="">
+						</div>
+					</div>
+				</section>
+				<section><h3>Очередь</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/10_queue/queue.cpp" src-data="5-21|-1" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/10/q01.jpg" alt="">
+							<pre><code src="files/10_queue/queue.cpp" src-data="27-34|1" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Тестирование</h3>
+					<div data-markdown><textarea data-template>
+						- Заполнить очередь до максимума
+						- Вывести содержимое
+						- *Дополнительно:*
+							- *Освободить половину*
+							- *Заполнить освободившееся место*
+							- *Вывести содержимое*
+						- Извлечь все элементы и вывести каждый на экран
+					</textarea></div>
+				</section>
+
+				<section><h3>v2. Кольцевая очередь</h3>
+					<img src="imgs/10/q02.jpg" alt="">
+				</section>
+				<section><h3>v3.1. Очередь с приоритетами</h3>
+					<h4>Приоритетное включение</h4>
+					<img src="imgs/10/q03.jpg" alt="">
+				</section>
+				<section><h3>v3.2. Очередь с приоритетами</h3>
+					<h4>Приоритетное исключение</h4>
+					<img src="imgs/10/q04.jpg" alt="">
+				</section>
+				
+				<section><h3>Практика</h3>
+					<div data-markdown><textarea data-template>
+						- Заменить массив на динамический
+						- Реализовать: 
+							- Кольцевую очередь
+							- Очередь с приоритетным включением
+							- Очередь с приоритетным исключением
+						- Сделать очередь шаблонной
+					</textarea></div>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Игра в пьяницу
+
+						- В игре в пьяницу карточная колода раздается поровну двум игрокам. Далее они вскрывают по одной верхней карте, и тот, чья карта старше, <u>забирает</u> себе обе, затем они кладутся <u>под низ его колоды</u>. Тот, кто остается без карт – <u>проигрывает</u>.
+						- В колоде все карты одной масти, а самая младшая карта побеждает самую старшую карту ("шестерка берет туза"). 
+						- Пусть в игре участвует <u>10</u> карт, имеющих значения от `0` до `9`.
+						- Программа должна определить, кто выигрывает вывев `first` или `second` и количество сделанных ходов. Если пройдено <u>106</u> ходов игра заканчивается и выводится `botva`.	
+
+						| Входные данные: | Выходные данные: |
+						|---|---|
+						|1 3 5 7 9 | second 5 |
+						|2 4 6 8 0 ||
+					</textarea>
+				</section>
+				<section data-markdown="home-works-md\10_queue.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

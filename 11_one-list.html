@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>one-list</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Динамические структуры данных<br>Односвязный список</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+				
+				<section><h3>Экзамен</h3></section>
+
+				<section><h3>Список – это?</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1 fragment fade-in">
+							<img src="imgs/11/1202.png" alt="" height="300rem">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/11/1201.jpg" alt="" height="300rem">
+						</div>
+					</div>
+				</section>
+				<section><h3>Есть ли порядок?</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<img src="imgs/11/li01.jpg" alt="">
+						</div>
+						<div class="fragment fade-in" data-fragment-index="0">
+							<img src="imgs/11/li02.jpg" alt="">
+						</div>
+					</div>
+					<div class="fragment current-visible" data-fragment-index="1">
+						<img src="imgs/11/li03.jpg" alt="">
+					</div>
+				</section>
+				<section><h3>Односвязный список</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<img src="imgs/11/li11.jpg" alt="" height="150rem">
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="3-6" no-after data-line-numbers=""></code></pre>
+									<pre><code src="files/11_one-list/lect.cpp" src-data="8,11,29" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="imgs/11/1203.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<img src="imgs/11/Screenshot_1.jpg" alt="" height="150rem">
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="8-9,13,15-29" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="3-6" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section><h3>Обход всех элементов</h3>
+					<div><img src="imgs/11/Screenshot_2.jpg" alt="" height="120rem"></div>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/11_one-list/lect.cpp" src-data="75-76,,84" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/11_one-list/lect.cpp" src-data="75-84" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Обход всех элементов</h3>
+					<div><img src="imgs/11/Screenshot_2.jpg" alt="" height="120rem"></div>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="85,,87" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="88-89,,95-96" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="85-87" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="88-96" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Вставка в начало</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div><img src="imgs/11/Screenshot_3.jpg" alt="" height="200rem"></div>
+							<pre><code src="files/11_one-list/lect.cpp" src-data="97-98,,103" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div><img src="imgs/11/Screenshot_4.jpg" alt="" height="200rem"></div>
+							<pre><code src="files/11_one-list/lect.cpp" src-data="97-103" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section><h3>Проверка</h3>
+					<pre><code src="files/11_one-list/lect.cpp" src-data="37-43|-1" no-after data-line-numbers=""></code></pre>
+				</section>
+
+				<section><h3>Добавление в конец</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div><img src="imgs/11/Screenshot_5.jpg" alt="" height="120rem"></div>
+							<pre><code src="files/11_one-list/lect.cpp" src-data="104-105,,116" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="104-116" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_6.jpg" alt="" height="150rem"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>init-list</h3>
+				</section>
+				<section><h3>Удаление с конца</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="121-124,,146" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_7.jpg" alt="" height="150rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="121-132,,146" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_8.jpg" alt="" height="180rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="121,,144-146" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_9.jpg" alt="" height="150rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="121,,134-146" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_10.jpg" alt="" height="220rem"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Поиск</h3>
+					<div><img src="imgs/11/Screenshot_11.jpg" alt="" height="120rem"></div>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<pre><code src="files/11_one-list/lect.cpp" src-data="147-148,,156-157" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/11_one-list/lect.cpp" src-data="147-157" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Поиск и удаление</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="158-162,,178" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_12.jpg" alt="" height="250rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="158-168,,178" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_13.jpg" alt="" height="250rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="158,,170-178" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_14.jpg" alt="" height="270rem"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Вставка</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="179,,184,,195" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_15.jpg" alt="" height="250rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="179-183,,195" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_16.jpg" alt="" height="250rem"></div>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/11_one-list/lect.cpp" src-data="179,,184-195" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/11/Screenshot_17.jpg" alt="" height="270rem"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section><h3>Большая проверка</h3>
+					<pre><code src="files/11_one-list/lect.cpp" src-data="36-52"  data-line-numbers=""></code></pre>
+				</section>
+
+				<section><h3>Самостоятельно</h3>
+					<pre><code src="files/11_one-list/practice-self.cpp" src-data="14-20"></code></pre>
+				</section>
+				<section><h3>Практика</h3>
+					<pre><code src="files/11_one-list/practice1.cpp" src-data="3-15"></code></pre>
+				</section>
+				
+				<section data-markdown="home-works-md\11_one-list.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Введение</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Введение в ООП</h2>
+					<small name="autor" style="margin-right:20%; margin-top: 5%; text-align: left;">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+
+				<section><h3>Ресурсы программиста</h3>
+					<p style="margin-right:30%">Проблемы в программировании</p>
+					<img src="imgs/01/0101_cr.jpg" height="300em">
+					<p style="margin-left:30%">Издержки в решении</p>
+				</section>
+				<section><h3>Основа ООП</h3>
+					<p>Принцип: «все в программе – объекты»</p>
+					<img src="imgs/01/0102.jpg" alt="пикча с объектами" height="400em">
+				</section>
+				<section><h3>Пример ООП</h3>
+					<div class="r-hstack">
+						<div style="margin-right: 3rem;">
+							<p>Функциональный стиль</p>
+							<pre><code data-line-numbers="" src="files/01_intro/00-demo.cpp" src-data="2-9" after></code></pre>
+						</div>
+						<div>
+							<p>Объектно-ориентированный</p>
+							<pre><code data-line-numbers="" src="files/01_intro/00-demo.cpp" src-data="12-19"></code></pre>
+						</div>
+					</div>
+				</section>
+				<!-- TODO: переписать более понятно про абстракции=правописание -->
+				<section><h3>Что есть ООП</h3>
+					<h4>Инкапсуляция | Наследование | Полиморфизм</h4>
+					<div class="r-hstack" style="align-items: normal;">
+						<div data-markdown style="margin-right: 3rem;">
+							<textarea data-template>
+								- составляющие:
+									- литературная
+									- синтаксическая			
+									- архитектурная
+							</textarea>
+							<textarea data-template>
+								- Специальные инструменты
+									- объекты
+									- данные объекта
+									- действия объекта
+									- шаблоны
+									- потомки
+									- …							
+							</textarea>
+						</div>
+						<div data-markdown>
+							<textarea data-template>
+								- Абстрактный подход
+									- проектирование приложений
+									- распределение задач
+									- поддержка приложения
+									- развитие приложения
+									- …								
+							</textarea>
+						</div>
+					</div>
+				</section>
+				<section><h3>А как делать...</h3>
+					<img class="r-stretch" src="imgs/01/0103.jpg">
+					<p style="margin-top: -10px; margin-left: 60%;">(а в С++?)</p>
+				</section>
+				<section><h3>Functional-style</h3>
+					<pre><code data-line-numbers="" src="files\01_intro\01-diff_style.cpp" src-data="8-19"></code></pre>
+				</section>
+				<section><h3>OOP-style</h3>
+					<pre><code data-line-numbers="" src="files\01_intro\01-diff_style.cpp" src-data="24-35"></code></pre>
+				</section>
+				<section><h3>Самостоятельно</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/01_intro/practice1.cpp" src-data="10-23|-1" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/01_intro/practice1.cpp" src-data="24-38" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Hidden <c>this</c></h3>
+					<pre><code data-line-numbers="4,11|5,10|" data-fragment-index="0" src="files\01_intro\02-hidden.cpp" src-data="2-13"></code></pre>
+				</section>
+				<section><h3>Поля и методы</h3>
+					<pre><code data-line-numbers="" src="files/01_intro/10-syntax.cpp" src-data="12-18"></code></pre>
+				</section>
+				<section><h3>Класс и объекты класса</h3>
+					<div class="r-hstack">
+						<img src="imgs/01/0104.jpg" alt="" height="300px">
+						<div class="arrow right"></div>
+						<img src="imgs/01/0106.jpg" alt="" height="300px">
+					</div>
+					<div data-markdown><textarea data-template>
+						``` cpp
+						Point p1{3, 4};
+						// Point - класс (тип)
+						// p1 - объект класса (переменная типа…)
+						```
+					</textarea></div>
+				</section>
+				<section><h3>Самостоятельно</h3>
+					<p>Добавьте новый объект со значениями <c>Petrov Petr: 2004</c></p>
+					<pre><code data-line-numbers="" src="files/01_intro/practice1.cpp" src-data="17-22"></code></pre>
+				</section>
+				<section><h3>Модификаторы доступа <br>(инкапсуляция)</h3>
+					<pre><code data-line-numbers="|14-99" src="files/01_intro/12-example.cpp" src-data="6-28"></code></pre>
+				</section>
+				<!-- TODO: добавить про инвариант -->
+				<section><h3>Аксессор/инспектор<br>(getter)</h3>
+					<div class="r-hstack" style="height: 25rem;">
+						<img src="imgs/01/0107.jpg" alt="" >
+						<div>
+							<pre style="margin-bottom: 1rem;"><code data-line-numbers="" src="files/01_intro/13-get_set.cpp" src-data="6-12,15" no-after></code></pre>
+							<pre><code data-line-numbers="" src="files/01_intro/13-get_set.cpp" src-data="24"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Мутатор/модификатор<br>(setter)</h3>
+					<div class="r-hstack" style="height: 25rem;">
+						<div>
+							<pre style="margin-bottom: 1rem;"><code data-line-numbers="" src="files/01_intro/13-get_set.cpp" src-data="6-10,13-15" no-after></code></pre>
+							<pre><code data-line-numbers="" src="files/01_intro/13-get_set.cpp" src-data="22-23"></code></pre>
+						</div>
+						<img src="imgs/01/0108.jpg" alt="" height="100%">
+					</div>
+				</section>
+				<section><h3>Самостоятельно</h3>
+					<p>Добавьте необходимые модификаторы доступа</p>
+					<p>Добавьте методы <c>SetYear</c> <c>GetYear</c> <c>GetAge</c></p>
+					<pre><code data-line-numbers="" src="files/01_intro/practice1.cpp" src-data="9-13"></code></pre>
+				</section>
+				<section><h3>Наименования</h3>
+					<pre><code data-line-numbers="" src="files/01_intro/10-syntax.cpp" src-data="2-10"></code></pre>
+				</section>
+				<section><h3>inline	|	global</h3>
+					<div class="r-hstack">
+						<pre><code data-line-numbers="" src="files/01_intro/11-inline.cpp" src-data="5-16" no-after></code></pre>
+						<pre><code data-line-numbers="" src="files/01_intro/11-inline.cpp" src-data="17-23"></code></pre>
+					</div>
+				</section>
+				<section><h3>Практика</h3>
+					<!-- 
+						- Написать программу «Калькулятор обоев». Программа позволяет: 
+							- добавлять и редактировать параметры комнат
+							- параметры каждого вида обоев	 -->
+					<div data-markdown><textarea data-template>
+						- Написать программу «Калькулятор обоев». Программа позволяет: 
+							- количество комнат под подклейку обоев
+							- параметры каждой комнаты
+							- параметры каждого вида обоев, которые планируется использовать 
+						- В результате расчета программа выдает:
+							- необходимое количество рулонов каждого вида, 
+							- общую стоимость закупки обоев. 
+						- Для решения описать классы: `Квартира`, `Комната`, `РулонОбоев`. 
+						- Полe квартиры: `список комнат`. 
+						- Поля комнаты: `название`, `размеры`, `клеить ли потолок`. 
+						- Поля рулона: `название`, `размеры`, `цена`.						
+					</textarea></div>
+				</section>
+				
+				<section data-markdown="home-works-md\01_Intro.md"></section>
+
+				<!-- ₽ -->
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>

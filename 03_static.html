@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Static. Const</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Константы<br>
+						Статика<br>
+						Дружба
+						</h2>
+					<small name="autor" style="margin-right:20%; margin-top: 5%; text-align: left;">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+				
+				<section><h3>Статические члены класса</h3></section>
+				<section><h3>Класс и объекты класса</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<div><img src="imgs/03/0401.jpg" alt=""></div>
+							<pre style="margin-top: -13rem; margin-right: 1rem; box-shadow: none;">
+								<code style="background: rgba(205, 214, 219, 0); font-weight: bold; font-size: 1.8rem; color: red;"><script type="text/template">
+								Cat {
+									color,
+									size
+								}
+							</script></code></pre>
+						</div>
+						<div class="h-mar">
+							<div class="arrow right" style="font-size: 3rem;"></div>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<div class="r-hstack">
+										<div class="h-mar h-mar-r1">
+											<div><img src="imgs/03/0403_cr.jpg" alt="" height="100rem"></div>
+											<c>Cat(red, 1)</c>
+										</div>
+										<div class="h-mar h-mar-l1">
+											<div><img src="imgs/03/0404_cr.jpg" alt="" height="100rem"></div>
+											<c>Cat(yelow, 1)</c>
+										</div>
+									</div>
+									<div><img src="imgs/03/0405_cr.jpg" alt="" height="200rem"></div>
+									<c>Cat(green, 2)</c>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<div><img src="imgs/03/0402_cr.jpg" alt="" height="400rem"></div>
+									<c>Cat(blue, 4)</c>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Глобальная переменная</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/03_static.const/00_global.cpp" src-data="6,8-11,15-21" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/03_static.const/00_global.cpp" src-data="26-31,33,38-40" data-line-numbers="" no-after></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Статическое поле</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/03_static.const/00_global.cpp" src-data="8-11,13,,17-23" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/03_static.const/00_global.cpp" src-data="29-31,35,38-40,44" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>-std=c++17</h3>
+					<pre><code src="files/03_static.const/00_global.cpp" src-data="50-52" data-line-numbers="" no-after></code></pre>
+				</section>
+				<section><h3>Статические методы</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/03_static.const/01_static.cpp" src-data="3-6,,9-16" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/03_static.const/01_static.cpp" src-data="20-25" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Практика</h3>
+					<pre><code src="files/03_static.const/practice1.cpp" src-data="5-14" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files/03_static.const/practice1.cpp" src-data="19-23" data-line-numbers=""></code></pre>
+				</section>
+
+				<section><h3>Константы</h3></section>
+				<section><h3>Константные объекты</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/03_static.const/10-const.cpp" src-data="11-16" data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="imgs/03/0406.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<pre><code src="files/03_static.const/10-const.cpp" src-data="3-5" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/03_static.const/10-const.cpp" src-data="12,18" data-line-numbers="" no-after></code></pre>
+							<error>invalid conversion from 'const char*' to 'char*'</error>
+						</div>
+						<div class="fragment current-visible">
+							<pre><code src="files/03_static.const/10-const.cpp" src-data="6-8" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/03_static.const/10-const.cpp" src-data="12,19" data-line-numbers=""></code></pre>
+						</div>
+						<div class="fragment current-visible">
+							<pre><code src="files/03_static.const/11-this.cpp" src-data="5-8,10,14-16" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/03_static.const/11-this.cpp" src-data="19-20,22" data-line-numbers="" no-after></code></pre>
+							<error>passing 'const Point' as 'this' argument</error>
+						</div>
+						<div class="fragment current-visible">
+							<pre><code src="files/03_static.const/11-this.cpp" src-data="5-8,12,14-16" data-line-numbers="" no-after></code></pre>
+							<pre><code src="files/03_static.const/11-this.cpp" src-data="19-20,24" data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Практика 2</h3>
+					<pre><code src="files/03_static.const/practice2.cpp" src-data="4-17" no-after data-line-numbers=""></code></pre>
+				</section>
+
+				<section><h3>Дружественность</h3></section>
+				<section><h3>Не-Дружественные функции</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/03_static.const/20-friend.cpp" src-data="3-7,9-12" data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/03/0407.jpg" alt="">
+						</div>
+					</div>
+				</section>
+				<section><h3>Дружественные функции</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/03_static.const/20-friend.cpp" src-data="3-12" data-line-numbers="" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="imgs/03/0408.jpg" alt="" height="320em">
+						</div>
+					</div>
+				</section>
+				<section><h3>Дружественные методы?</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/03_static.const/21-methods.cpp" src-data="14-18,20|4" data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/03_static.const/21-methods.cpp" src-data="7-9,,15-16,25-31" data-line-numbers="" no-after></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/03_static.const/21-methods.cpp" src-data="3,18-24" data-line-numbers="1,7" no-after></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/03_static.const/21-methods.cpp" src-data="4,7-9,,15-16" data-line-numbers="1,2,6" no-after></code></pre>
+								</div>
+							</div>
+							<error>'Triangle' has not been declared</error>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/03_static.const/21-methods.cpp" src-data="3,7-9,,15-16" data-line-numbers="1,3" no-after></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/03_static.const/21-methods.cpp" src-data="4,18-24" data-line-numbers="1,2" no-after></code></pre>
+								</div>
+							</div>
+							<error>'Point' does not name a type</error>
+						</div>
+					</div>
+				</section>
+				<section><h3>Дружественные методы!</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/03_static.const/21-methods.cpp" src-data="3,5-9,,15-16" data-line-numbers="1-4,8-9" no-after></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/03_static.const/21-methods.cpp" src-data="4,18-24" data-line-numbers="1-2,7-8"></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>static VS friend</h3>
+					<pre><code src="files/03_static.const/30-vs.cpp" src-data="3,,9-15|1" no-after data-line-numbers=""></code></pre>
+					<pre><code src="files/03_static.const/30-vs.cpp" src-data="18-21|1" data-line-numbers=""></code></pre>
+				</section>
+
+				
+				<section data-markdown="home-works-md\03_static-const.md"></section>
+
+				<!-- ₽ -->
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>
