@@ -1,0 +1,6 @@
+[submodule "reveal"]
+	path = reveal
+	url = https://github.com/aatutor/clear_reveal4lections.git
+[submodule "files"]
+	path = files
+	url = https://github.com/aatutor/oop_cpp_files.git
