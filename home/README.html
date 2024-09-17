@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>14_inheritance.md</title>
+    <title>README.md</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     
 <style>
@@ -379,93 +379,70 @@ code {
 }
 
 </style>
-<link rel="stylesheet" href="https://aatutor.github.io/slides_oop_cpp/custom-md.css" type="text/css">
+<link rel="stylesheet" href="https://aatutor.github.io/slides_oop_cpp/src/custom-md.css" type="text/css">
 </head>
 
 <body>
-    <div class="home-md">
-<!-- .element: hidden="hidden" -->
-<h3 id="%D0%B4%D0%B7">ДЗ</h3>
-<p>Создайте класс <code>Passport</code>, который будет содержать информацию о гражданине:</p>
-<ul>
-<li>Ф.И.О.</li>
-<li>Дата рождения</li>
-<li>Номер паспорта</li>
-</ul>
-<p>С помощью механизма наследования, реализуйте класс <code>ForeignPassport</code> (загранпаспорт) производный от <code>Passport</code>. Загранпаспорт содержит помимо паспортных данных, также данные:</p>
-<ul>
-<li>Серия и номер визы</li>
-<li>Номер загранпаспорта</li>
-</ul>
-<p>Реализуйте для любого вида паспорта методы:</p>
-<ul>
-<li><code>GetHolderShort()</code> - возвращает строку &quot;<code>Фамилия</code> <code>И</code>.<code>О</code>.&quot;</li>
-<li><code>GetFullPassport()</code> - возвращает строку &quot;<code>Фамилия</code> <code>Имя</code> <code>Отчество</code> <code>дата_рождения</code> passport: <code>номер_паспорта</code>&quot;</li>
-</ul>
-<p>а для загранпаспорта:</p>
-<ul>
-<li><code>GetVisa()</code> - возвращает строку &quot;<code>серия</code>:<code>номер_визы</code>&quot;</li>
-<li><code>GetFullInfo()</code> - возвращает строку &quot;<code>Фамилия</code> <code>Имя</code> <code>Отчество</code>(<code>дата_рождения</code>) passport: <code>номер_паспорта</code> foreign: <code>номер_загранпаспорта</code> виза: <code>серия</code>:<code>номер_визы</code>&quot;</li>
-</ul>
-<p>Все методы возвращают класс <code>std::string</code>.</p>
+    <h1 id="%D0%B4%D0%B5%D0%BC%D0%BE-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B4%D0%BB%D1%8F-%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B9-%D0%BF%D0%BE-%D0%BE%D0%BE%D0%BF-%D0%BD%D0%B0-%D1%81">Демо файлы для лекций по ООП на С++.</h1>
+<p><em>Номер папки соответсвует номеру лекции, в которой демонстрировались эти исходники.</em></p>
+<p><a href="https://aatutor.github.io/slides_oop_cpp/">Актуальные</a> презентации.<br>
+<a href="https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/">Архив</a> со старыми презентациями.</p>
+<p><a href="https://github.com/aatutor/slides_oop_cpp/tree/main/home-md">ДЗ (рабочие)</a></p>
 <hr>
-<h3 id="%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0">Пример использования класса</h3>
-<pre class="hljs"><code><div><span class="hljs-function">Passport <span class="hljs-title">ivanPass</span><span class="hljs-params">(<span class="hljs-string">"Ivan"</span>, <span class="hljs-string">"Ivanov"</span>, <span class="hljs-string">"Ivanovich"</span>, <span class="hljs-string">"01.01.2000"</span>, <span class="hljs-string">"112233"</span>)</span></span>;
-<span class="hljs-built_in">cout</span> &lt;&lt; ivanPass.GetHolderShort() &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="hljs-built_in">cout</span> &lt;&lt; ivanPass.GetFullPassport() &lt;&lt; <span class="hljs-built_in">endl</span>;
-
-<span class="hljs-function">ForeignPassport <span class="hljs-title">semenForpass</span><span class="hljs-params">(<span class="hljs-string">"Semenov"</span>, <span class="hljs-string">"Semen"</span>, <span class="hljs-string">"Semenovich"</span>, <span class="hljs-string">"05.10.1999"</span>, <span class="hljs-string">"123456"</span>, <span class="hljs-string">"78"</span>, <span class="hljs-string">"9101112"</span>, <span class="hljs-string">"102030"</span>)</span></span>;
-<span class="hljs-built_in">cout</span> &lt;&lt; semenForpass.GetHolderShort() &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="hljs-built_in">cout</span> &lt;&lt; semenForpass.GetFullPassport() &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"Visa: "</span> &lt;&lt; semenForpass.GetVisa() &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"Full info: "</span> &lt;&lt; semenForpass.GetFullInfo() &lt;&lt; <span class="hljs-built_in">endl</span>;
-</div></code></pre>
+<h2 id="%D0%BD%D0%B0%D0%BF%D0%BE%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE-%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82-%D0%B4%D0%B7">Напоминалка про формат ДЗ</h2>
+<ol>
+<li>Виды решений (один из):
+<ul>
+<li>Исходник (<code>.cpp</code>)</li>
+<li>Исходник<u>и</u> в архиве <code>.zip</code> <strong>без сжатия. Только если их требуется несколько! (<u>НЕ весь проект!!!</u>)</strong></li>
+<li>Ссылка на репозиторий	(или coliru)</li>
+</ul>
+</li>
+<li>Код <u>компилируется</u> без ошибок (<code>MinGW</code>|<code>MSVS</code>. Не clang)</li>
+<li>Код отформатирован
+<ol>
+<li><u>Отступы</u> (обязательно!)</li>
+<li><em>Именование полей, методов и т.п...</em></li>
+<li><em>Отсутствие дублирования кода</em></li>
+</ol>
+</li>
+<li>Код проходит <u>тесты</u>*
+<ol>
+<li><em>Решает поставленную задачу</em></li>
+</ol>
+</li>
+</ol>
 <hr>
-<p>cmd:</p>
-<pre class="hljs"><code><div>Ivan I.I.
-Ivan Ivanov Ivanovich 01.01.2000 112233
-Semenov S.S.
-Semenov Semen Semenovich 05.10.1999 123456
-Visa: 78:9102030
-Full info: Semenov Semen Semenovich (05.10.1999) passport: 123456 foreign: 102030 visa: 78:9101112
-</div></code></pre>
-<p><a href="https://github.com/aatutor/oop_cpp_files">Примеры с презентаций (github)</a></p>
-<p><a href="https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/">Архив презентаций</a></p>
-<p><a href="https://aatutor.github.io/slides_oop_cpp/">Актуальные презентации</a>.</p>
+<h3 id="%D0%B7%D0%B0%D0%BA%D1%80%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5-%D0%BF%D1%80%D0%BE%D0%B1%D0%B5%D0%BB%D1%8B">Закрывайте пробелы</h3>
+<p><a href="./_tasks">Папка с задачами</a> для закрепления знаний по С++.</p>
 <hr>
-<!-- .slide: data-visibility="hidden" -->
-<h2 id="%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%B0%D0%B2%D1%82%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B8">Эксперементальный способ автопроверки:</h2>
-<textarea id="code" placeholder="МЕСТО ДЛЯ ВАШЕГО КОДА">
-</textarea>
-<button id="run">Запустить пример</button>
-<button id="test" hidden="hidden">Запустить тест</button>
-<div id="result" style="min-height: 500px"> ^^^ вставить код для проверки</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-	var path = '/Archive2/47/700564b13bc29e/main.cpp';
-	function test(files, args) {
-		var http = new XMLHttpRequest();
-		http.open("POST", "http://coliru.stacked-crooked.com/compile", false);
-		var makeLink = (p, n) => { return "ln -s " + p + ' ' + n + " && " };
-		var cmnd = files.map(f => makeLink(f.path, f.name)).join('');
-		var names = files.map(f => f.name).join(' ');
-		var cmd = cmnd +" ln -s main.cpp solve.cpp && "+ "g++ -std=c++11 -std=gnu++11 "+names+(args ? " "+args :'')+" && ./a.out";
-		console.log(cmd);
-		http.send(JSON.stringify({ "cmd": cmd, "src": $("#code").val() }));
-		console.log(http.response);
-		// console.log(http);
-		var res = $('<code>');
-		http.response.split('\n').forEach(function(line) {
-			res.append( $('<tr>').append( $('<td>').html(line)) ); 
-		});
-		$("#result").html($('<pre>', {'class': 'hljs'}).append(res) );
-	}
-	$(document).ready(function(){
-		$("button#run").click(function(){ test([{path : path, name : 'temp.cpp'}], '-DPUB'); });
-		$("button#test").click(function(){ test([{path : path, name : 'temp.cpp'}]); });
-	});
-</script>
-</div>
+<h3 id="%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%B7%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">Ресурсы для изучения</h3>
+<ul>
+<li>Любой самоучитель или книга по С++ и ООП
+<ul>
+<li>Учебник академии</li>
+<li><a href="https://metanit.com/cpp/tutorial/5.1.php">Учебник на метаните</a></li>
+<li><a href="https://cplusplus.com/doc/tutorial/">Официальное пособие</a></li>
+</ul>
+</li>
+<li>Стиль именования и форматирования:
+<ul>
+<li><a href="https://habr.com/ru/post/477722/">Рекомендации гугла</a></li>
+<li><a href="https://habr.com/ru/post/172091/">Сборная статья</a></li>
+</ul>
+</li>
+<li>Для <u><em>углубленного</em></u> изучения C/С++:
+<ul>
+<li><a href="https://youtube.com/playlist?list=PL3BR09unfgciJ1_K_E914nohpiOiHnpsK">Курс видео-лекций в МФТИ по С++</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/regex">Официальная документация</a></li>
+<li><a href="http://www.gowrikumar.com/c/index.html">Набор задачек для закрепления знаний по С</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><a href="./99_exam">Требования к экзамену</a></p>
+<hr>
+<p><a href="https://youtu.be/lotXjoGTaws">Видео инструкция</a> по работе с тестами.</p>
 
 </body>
 
