@@ -1,0 +1,5 @@
+.home-md code:not(pre>code) {
+	color: #010049 !important;
+	background-color: #0066ff1f;
+	border-radius: 4px;
+}
