@@ -73,7 +73,9 @@ int main ()
 
 [Примеры с презентаций (github)](https://github.com/aatutor/oop_cpp_files)
 
-[Презентации](https://aatutor.github.io/slides_oop_cpp/) | [Архив](https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/)
+
+<small>[Презентации](https://aatutor.github.io/slides_oop_cpp/) | [Архив](https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/)</small>
+<!-- .element: hidden="hidden" -->
 
 ## [Проверить решение онлайн](https://coliru.stacked-crooked.com/a/29757b0607795d55)
 
