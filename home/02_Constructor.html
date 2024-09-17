@@ -379,7 +379,7 @@ code {
 }
 
 </style>
-<link rel="stylesheet" href="https://aatutor.github.io/slides_oop_cpp/custom-md.css" type="text/css">
+<link rel="stylesheet" href="https://aatutor.github.io/slides_oop_cpp/src/custom-md.css" type="text/css">
 </head>
 
 <body>
@@ -474,41 +474,8 @@ String updated
 
 </div></code></pre>
 <p><a href="https://github.com/aatutor/oop_cpp_files">Примеры с презентаций (github)</a></p>
-<p><a href="https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/">Архив презентаций</a></p>
-<p><a href="https://aatutor.github.io/slides_oop_cpp/">Актуальные презентации</a>.</p>
-<hr>
-<!-- .slide: data-visibility="hidden" -->
-<h2 id="%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%B0%D0%B2%D1%82%D0%BE%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B8">Эксперементальный способ автопроверки:</h2>
-<textarea id="code" placeholder="МЕСТО ДЛЯ ВАШЕГО КОДА">
-</textarea>
-<button id="run">Запустить пример</button>
-<button id="test">Запустить тест</button>
-<div id="result" style="min-height: 500px"> ^^^ вставить код для проверки</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-	var path = '/Archive2/a6/ffc2a83fcaa6b2/main.cpp';
-	function test(files, args) {
-		var http = new XMLHttpRequest();
-		http.open("POST", "http://coliru.stacked-crooked.com/compile", false);
-		var makeLink = (p, n) => { return "ln -s " + p + ' ' + n + " && " };
-		var cmnd = files.map(f => makeLink(f.path, f.name)).join('');
-		var names = files.map(f => f.name).join(' ');
-		var cmd = cmnd +" ln -s main.cpp solve.cpp && "+ "g++ -std=c++11 -std=gnu++11 "+names+(args ? " "+args :'')+" && ./a.out";
-		console.log(cmd);
-		http.send(JSON.stringify({ "cmd": cmd, "src": $("#code").val() }));
-		console.log(http.response);
-		// console.log(http);
-		var res = $('<code>');
-		http.response.split('\n').forEach(function(line) {
-			res.append( $('<tr>').append( $('<td>').html(line)) ); 
-		});
-		$("#result").html($('<pre>', {'class': 'hljs'}).append(res) );
-	}
-	$(document).ready(function(){
-		$("button#run").click(function(){ test([{path : path, name : 'temp.cpp'}], '-DPUB'); });
-		$("button#test").click(function(){ test([{path : path, name : 'temp.cpp'}]); });
-	});
-</script>
+<p><a href="https://aatutor.github.io/slides_oop_cpp/">Презентации</a> | <a href="https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/">Архив</a></p>
+<h2 id="%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD"><a href="https://coliru.stacked-crooked.com/a/911db53fe04ea1c0">Проверить решение онлайн</a></h2>
 </div>
 
 </body>

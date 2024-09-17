@@ -93,43 +93,8 @@ int main()
 
 [Примеры с презентаций (github)](https://github.com/aatutor/oop_cpp_files)
 
-[Архив презентаций](https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/)
+[Презентации](https://aatutor.github.io/slides_oop_cpp/) | [Архив](https://sourceforge.net/projects/cpp-oop-top-aca/files/Lections/active/)
 
-[Актуальные презентации](https://aatutor.github.io/slides_oop_cpp/).
+## [Проверить решение онлайн](https://coliru.stacked-crooked.com/a/cb4c58bad01b0f6e)
 
----
-<!-- .slide: data-visibility="hidden" -->
-## Эксперементальный способ автопроверки:
-
-<textarea id="code" placeholder="МЕСТО ДЛЯ ВАШЕГО КОДА">
-</textarea>
-<button id="run">Запустить пример</button>
-<button id="test">Запустить тест</button>
-<div id="result" style="min-height: 500px"> ^^^ вставить код для проверки</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-	var path = '/Archive2/45/4654971e570f3c/main.cpp';
-	function test(files, args) {
-		var http = new XMLHttpRequest();
-		http.open("POST", "http://coliru.stacked-crooked.com/compile", false);
-		var makeLink = (p, n) => { return "ln -s " + p + ' ' + n + " && " };
-		var cmnd = files.map(f => makeLink(f.path, f.name)).join('');
-		var names = files.map(f => f.name).join(' ');
-		var cmd = cmnd +" ln -s main.cpp solve.cpp && "+ "g++ -std=c++11 -std=gnu++11 "+names+(args ? " "+args :'')+" && ./a.out";
-		console.log(cmd);
-		http.send(JSON.stringify({ "cmd": cmd, "src": $("#code").val() }));
-		console.log(http.response);
-		// console.log(http);
-		var res = $('<code>');
-		http.response.split('\n').forEach(function(line) {
-			res.append( $('<tr>').append( $('<td>').html(line)) ); 
-		});
-		$("#result").html($('<pre>', {'class': 'hljs'}).append(res) );
-	}
-	$(document).ready(function(){
-		$("button#run").click(function(){ test([{path : path, name : 'temp.cpp'}], '-DPUB'); });
-		$("button#test").click(function(){ test([{path : path, name : 'temp.cpp'}]); });
-	});
-</script>
 :::
