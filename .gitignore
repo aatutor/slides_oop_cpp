@@ -1,0 +1,8 @@
+
+readme.html
+
+*.exe
+
+*/output
+*/.vscode
+_tasks/*.html
