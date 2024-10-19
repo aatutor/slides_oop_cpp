@@ -5,6 +5,8 @@
 #define GET(...) #__VA_ARGS__, __VA_ARGS__
 #define RUN(...) #__VA_ARGS__, [&](){ __VA_ARGS__ }()
 #define FUN(...) #__VA_ARGS__, [&](){ __VA_ARGS__ }
+#define ECHO(...) std::cout << ">> " << #__VA_ARGS__ << std::endl; __VA_ARGS__
+
 
 // template <typename T>
 class Verify {
