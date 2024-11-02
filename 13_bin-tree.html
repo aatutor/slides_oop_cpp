@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>bin tree</title>
+
+		<link rel="stylesheet" href="reveal/dist/reset.css">
+		<link rel="stylesheet" href="reveal/dist/reveal.css">
+		<!-- <link rel="stylesheet" href="reveal/dist/theme/_white-personel.css"> -->
+		<link rel="stylesheet" href="reveal/dist/theme/_sky-personel.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal/plugin/highlight/base_hl.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-state="make-it-pop">
+					<h2>Динамические структуры данных<br>Бинарное дерево</h2>
+					<small name="autor">
+						Тимофеев Александр Алексеевич
+					</small>
+					<!-- <a href="google.com" style="text-align: down;">Ссылка</a> -->
+				</section>
+				
+				<section><h3>Экзамен</h3></section>
+
+				<section><h3>Трехсвязный список</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<pre><code src="files/13_bin_tree/lect.cpp" src-data="11-16" no-after data-line-numbers=""></code></pre>
+							<pre><code src="files/13_bin_tree/lect.cpp" src-data="19-20,,34" no-after data-line-numbers=""></code></pre>
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div><img src="src/imgs/11/1203.png" style="margin-bottom: -2rem;" height="200rem" alt=""></div>
+							<div><img src="src/imgs/12/pic01.jpg" style="margin-top: 0px;" height="200rem" alt=""></div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Бинарное дерево</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<img src="src/imgs/13/bt00.jpg" alt="">
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<img src="src/imgs/13/bt01.jpg" alt="">
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="19-34" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="6-16" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Пример дерева</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="src/imgs/13/1401.jpg" height="400rem" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<img src="src/imgs/13/1402.png" height="400rem" alt="">
+						</div>
+					</div>
+				</section>
+
+				<section><h3>Проверка на пустоту</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="src/imgs/13/1402.png" height="400rem" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<pre><code src="files/13_bin_tree/lect.cpp" src-data="74-76" no-after data-line-numbers=""></code></pre>
+						</div>
+					</div>
+				</section>
+				<section><h3>Вставка элемента</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<img src="src/imgs/13/1403.png" height="200rem" alt="">
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="79-82,,85,,103" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<div><img src="src/imgs/13/1403.png" height="200rem" alt=""></div>
+									<div><img src="src/imgs/13/1404.png" height="100rem" alt=""></div>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="79-90,,103" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<img src="src/imgs/13/1405.png" height="300rem" alt="">
+								</div>
+								<div class="h-mar h-mar-l1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="79,,90-103" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Печать дерева</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="src/imgs/13/1406.png" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="37-41,106-110,113-114,,122" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="113-122" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Проверка</h3>
+					<pre><code src="files/13_bin_tree/lect.cpp" src-data="47-52" no-after data-line-numbers=""></code></pre>
+				</section>
+				
+				<section><h3>Поиск узла</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="src/imgs/13/1402.png" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="125-127,130-131,,141-142,145-146,,152-153" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="130-142" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Проверка</h3>
+					<pre><code src="files/13_bin_tree/lect.cpp" src-data="54-60" no-after data-line-numbers=""></code></pre>
+				</section>
+
+				<section><h3>Поиск наименьшего узла</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="src/imgs/13/1407.png" height="400rem" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="156,,159-160" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="156-160" no-after data-line-numbers=""></code></pre>
+									<c>Меньший = самый левый</c>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Получение следующего узла</h3>
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+							<img src="src/imgs/13/1402.png" alt="">
+						</div>
+						<div class="h-mar h-mar-l1">
+							<div class="r-stack">
+								<div class="fragment fade-out" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="163-165,,177" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="fragment current-visible" data-fragment-index="0">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="163-177" no-after data-line-numbers=""></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section><h3>Удаление элемента</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="180-182,185-187,,271" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_1.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="185,,190-199,,214,271" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_2.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="185,,201-214,271" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_3.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<img src="src/imgs/13/tree-delete/Screenshot_1.jpg" alt="">
+								</div>
+								<div class="h-mar h-mar-l1 h-mar-r1"><div class="arrow right"></div></div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_4.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="185-187,,271" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_5.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="185,,190-199,,214,271" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_6.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<pre><code src="files/13_bin_tree/lect.cpp" src-data="185,,201-214,,271" no-after data-line-numbers=""></code></pre>
+								</div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_7.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="fragment current-visible">
+							<div class="r-hstack">
+								<div class="h-mar h-mar-r1">
+									<img src="src/imgs/13/tree-delete/Screenshot_5.jpg" alt="">
+								</div>
+								<div class="h-mar h-mar-l1 h-mar-r1"><div class="arrow right"></div></div>
+								<div class="h-mar h-mar-l1">
+									<img src="src/imgs/13/tree-delete/Screenshot_8.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section><h3>Проверка</h3>
+					<pre><code src="files/13_bin_tree/lect.cpp" src-data="62-69" no-after data-line-numbers=""></code></pre>
+				</section>
+				
+				<section><h3>Самостоятельно</h3>
+					<pre><code src="files/13_bin_tree/0-practice_self.cpp" src-data="17-23" data-line-numbers=""></code></pre>
+				</section>
+
+				<section data-markdown="home-md\13_bin-tree.md"></section>
+				<!-- ₽ -->
+				<section><h3></h3>
+				</section>
+				
+				<section><h3></h3>
+					<pre><code data-line-numbers=""><script type="text/template">
+					</script></code></pre>
+
+					<pre><code src="files" src-data="" data-line-numbers=""></code></pre>
+
+					<div data-markdown><textarea data-template>
+					</textarea></div>
+
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="0">
+						</div>
+						<div class="fragment current-visible" data-fragment-index="0">
+						</div>
+					</div>
+
+					<div class="r-hstack">
+						<div class="h-mar h-mar-r1">
+						</div>
+						<div class="h-mar h-mar-l1">
+						</div>
+					</div>
+				</section>
+				
+				<section data-markdown=""></section>
+
+				<section data-markdown>
+					<textarea data-template>
+					</textarea>
+				</section>
+				
+				<section><h3>Fragments</h3>
+					<div class="r-stack">
+						<div class="fragment fade-out" data-fragment-index="1">
+							<div>page 1 part 1</div>
+							<div class="fragment" data-fragment-index="0">page 1 part 2</div>
+						</div>
+						<div class="fragment fade-in" data-fragment-index="1">
+							<div class="fragment fade-out" data-fragment-index="10">
+								<div>page 2 part 1</div>
+								<div class="fragment" data-fragment-index="2">page 2 part 2</div>
+								<div class="fragment" data-fragment-index="3">page 2 part 3</div>
+							</div>
+						</div>
+						<div class="fragment current-visible" data-fragment-index="10">page 3</div>
+						<div class="fragment current-visible">page 4</div>
+						<div class="fragment">
+							<div class="fragment" data-fragment-index="0">last page part 1</div>
+							<div class="fragment">last page part 2</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal/fill-codes.js"></script>
+
+		<script src="reveal/dist/reveal.js"></script>
+		<script src="reveal/plugin/notes/notes.js"></script>
+		<script src="reveal/plugin/markdown/markdown.js"></script>
+		<script src="reveal/plugin/zoom/zoom.js"></script> <!-- win: alt+click -->
+		<script src="reveal/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1200,
+				transition: 'fade',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>
