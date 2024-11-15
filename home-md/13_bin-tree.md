@@ -71,8 +71,8 @@ z999zz: - all_tickets_paid -
 ```
 ---
 
-### [Онлайн проверка](https://coliru.stacked-crooked.com/a/27214138996b2682)
-[Исходники тестов]()
+### [Онлайн проверка](https://coliru.stacked-crooked.com/a/8f16aa7f28de6dff)
+[Исходники тестов](https://coliru.stacked-crooked.com/a/2719d5dfdc9648f4)
 
 ---
 [Примеры с презентаций (github)](https://github.com/aatutor/oop_cpp_files)
